@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Amira Dakhla — Premium Coastal Residences</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Noto+Kufi+Arabic:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient">
+      <div class="orb orb-a"></div>
+      <div class="orb orb-b"></div>
+      <div class="orb orb-c"></div>
+      <div class="grain"></div>
+    </div>
+
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-mark">
+          <img src="assets/logo.png" alt="Amira Dakhla logo" />
+        </div>
+        <div class="brand-text">
+          <span class="brand-title" data-i18n="brand">Amira Dakhla</span>
+          <span class="brand-subtitle" data-i18n="brand_sub">Coastal Residences</span>
+        </div>
+      </div>
+      <nav class="site-nav">
+        <a href="#vision" data-i18n="nav_vision">Vision</a>
+        <a href="#progress" data-i18n="nav_progress">Progress</a>
+        <a href="#availability" data-i18n="nav_availability">Availability</a>
+        <a href="#invest" data-i18n="nav_invest">Invest in Dakhla</a>
+        <a href="#residences" data-i18n="nav_residences">Residences</a>
+        <a href="#request" class="nav-cta" data-i18n="nav_request">Request Info</a>
+      </nav>
+      <div class="lang-switch">
+        <button type="button" class="lang-btn is-active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="fr">FR</button>
+        <button type="button" class="lang-btn" data-lang="ar">AR</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero_eyebrow">Dakhla, Morocco</p>
+          <h1 data-i18n="hero_title">A premium coastal address shaped by light, wind, and horizon.</h1>
+          <p class="hero-sub" data-i18n="hero_sub">
+            Amira Dakhla is a curated collection of residences designed for refined living on Morocco’s southern
+            shoreline. Limited release. Carefully serviced. Elegantly yours.
+          </p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#request" data-i18n="hero_cta_primary">Request information</a>
+            <a class="btn ghost" href="Projet Amira.pdf" data-i18n="hero_cta_secondary">Download brochure</a>
+            <a class="btn whatsapp" id="heroWhatsappCta" href="#" target="_blank" rel="noopener" data-i18n="hero_cta_whatsapp">WhatsApp</a>
+          </div>
+          <div class="hero-meta">
+            <div>
+              <span class="meta-label" data-i18n="meta_status">Sales status</span>
+              <span class="meta-value" data-i18n="meta_status_value">Now accepting reservations</span>
+            </div>
+            <div>
+              <span class="meta-label" data-i18n="meta_delivery">Delivery</span>
+              <span class="meta-value" data-i18n="meta_delivery_value">Schedule upon request</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <div class="hero-card-top">
+              <span data-i18n="hero_card_title">Units remaining</span>
+              <span class="hero-count" id="unitsRemaining">24</span>
+            </div>
+            <div class="hero-progress">
+              <div class="hero-progress-bar" id="unitsBar"></div>
+            </div>
+            <p class="hero-card-note" data-i18n="hero_card_note">Updated weekly based on reservations.</p>
+            <div class="hero-card-actions">
+              <button class="pill" type="button" data-i18n="hero_card_pill">Private tour</button>
+              <button class="pill" type="button" data-i18n="hero_card_pill_two">Investor deck</button>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="assets/project.png" alt="Amira Dakhla project view" />
+            <div class="image-caption" data-i18n="hero_image_caption">A calm, wind-sculpted coastline.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="vision" class="vision">
+        <div class="vision-copy">
+          <h2 data-i18n="vision_title">A destination for discerning buyers</h2>
+          <p data-i18n="vision_sub">
+            Designed with a restrained material palette and generous natural light, Amira Dakhla blends
+            contemporary lines with the spirit of the lagoon. Every detail is refined to support serenity,
+            privacy, and effortless arrival.
+          </p>
+        </div>
+        <div class="vision-grid">
+          <div class="vision-card">
+            <span class="vision-label" data-i18n="vision_card_one_label">Location</span>
+            <h3 data-i18n="vision_card_one_title">Dakhla, Morocco</h3>
+            <p data-i18n="vision_card_one_text">A unique coastal setting known for pristine light and open skies.</p>
+          </div>
+          <div class="vision-card">
+            <span class="vision-label" data-i18n="vision_card_two_label">Architecture</span>
+            <h3 data-i18n="vision_card_two_title">Sculpted minimalism</h3>
+            <p data-i18n="vision_card_two_text">Clean volumes, soft textures, and a focus on seamless indoor-outdoor flow.</p>
+          </div>
+          <div class="vision-card">
+            <span class="vision-label" data-i18n="vision_card_three_label">Lifestyle</span>
+            <h3 data-i18n="vision_card_three_title">Private, quiet, elevated</h3>
+            <p data-i18n="vision_card_three_text">A refined environment for owners who value discretion and comfort.</p>
+          </div>
+        </div>
+        <div class="location-spotlight">
+          <div class="location-media">
+            <img src="assets/location.png" alt="Location around Dakhla" />
+          </div>
+          <div class="location-copy">
+            <span class="vision-label" data-i18n="location_label">Prime setting</span>
+            <h3 data-i18n="location_title">Minutes from the lagoon, connected to the city</h3>
+            <p data-i18n="location_text">
+              Positioned to balance privacy and access, with direct connectivity to key leisure and transport points
+              in Dakhla.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="progress" class="progress">
+        <div class="progress-header">
+          <h2 data-i18n="progress_title">Construction progress and delivery timeline</h2>
+          <p data-i18n="progress_sub">
+            Track execution milestones and expected handover windows for buyers.
+          </p>
+        </div>
+        <div class="progress-layout">
+          <article class="progress-card">
+            <div class="progress-card-top">
+              <span class="progress-label" data-i18n="progress_overall_label">Overall construction</span>
+              <strong id="workPercent">62%</strong>
+            </div>
+            <div class="line-progress">
+              <div class="line-progress-bar" id="workBar"></div>
+            </div>
+            <p data-i18n="progress_overall_note">Updated from site reporting and contractor milestones.</p>
+          </article>
+          <article class="delivery-card">
+            <span class="progress-label" data-i18n="delivery_label">Target handover</span>
+            <h3 data-i18n="delivery_date">December 2027</h3>
+            <p data-i18n="delivery_note">
+              Delivery schedule may adjust based on permitting and final commissioning.
+            </p>
+          </article>
+        </div>
+        <div class="milestone-grid">
+          <div class="milestone-item">
+            <span data-i18n="milestone_one">Infrastructure and foundations</span>
+            <strong id="milestoneOne">100%</strong>
+          </div>
+          <div class="milestone-item">
+            <span data-i18n="milestone_two">Superstructure and shell</span>
+            <strong id="milestoneTwo">78%</strong>
+          </div>
+          <div class="milestone-item">
+            <span data-i18n="milestone_three">Interior finishing and landscaping</span>
+            <strong id="milestoneThree">35%</strong>
+          </div>
+        </div>
+      </section>
+
+      <section id="availability" class="availability">
+        <div class="availability-header">
+          <h2 data-i18n="availability_title">Availability snapshot</h2>
+          <p data-i18n="availability_sub">
+            Real-time availability is shared privately. The snapshot below reflects the remaining inventory.
+          </p>
+        </div>
+        <div class="availability-grid">
+          <div class="availability-card">
+            <span class="availability-label" data-i18n="availability_total_label">Total collection</span>
+            <span class="availability-value" id="totalUnits">64</span>
+          </div>
+          <div class="availability-card">
+            <span class="availability-label" data-i18n="availability_reserved_label">Reserved</span>
+            <span class="availability-value" id="reservedUnits">40</span>
+          </div>
+          <div class="availability-card">
+            <span class="availability-label" data-i18n="availability_remaining_label">Remaining</span>
+            <span class="availability-value highlight" id="remainingUnits">24</span>
+          </div>
+          <div class="availability-card">
+            <span class="availability-label" data-i18n="availability_update_label">Next update</span>
+            <span class="availability-value" data-i18n="availability_update_value">Every Friday</span>
+          </div>
+        </div>
+        <div class="units-track-wrap">
+          <div class="units-track-head">
+            <span data-i18n="availability_progress_label">Units left progress</span>
+            <strong id="unitsPercentLabel">37%</strong>
+          </div>
+          <div class="units-track">
+            <div class="units-track-bar" id="unitsTrackBar"></div>
+          </div>
+        </div>
+        <div class="availability-note" data-i18n="availability_note">
+          For the latest availability and pricing, request a private consultation.
+        </div>
+      </section>
+
+      <section id="invest" class="invest">
+        <div class="invest-header">
+          <h2 data-i18n="invest_title">Why invest in Dakhla</h2>
+          <p data-i18n="invest_sub">
+            Long-term potential comes from tourism growth, infrastructure investment, and strategic positioning.
+          </p>
+        </div>
+        <div class="invest-grid">
+          <article class="news-card">
+            <span class="news-tag" data-i18n="news_one_tag">Tourism</span>
+            <h3 data-i18n="news_one_title">Dakhla continues to attract leisure and sport tourism</h3>
+            <p data-i18n="news_one_text">
+              Demand for premium stays is expanding, supporting stronger long-term rental and resale dynamics.
+            </p>
+          </article>
+          <article class="news-card">
+            <span class="news-tag" data-i18n="news_two_tag">Infrastructure</span>
+            <h3 data-i18n="news_two_title">Ongoing transport and urban upgrades in the region</h3>
+            <p data-i18n="news_two_text">
+              Public and private investment in roads, connectivity, and services improves accessibility and value.
+            </p>
+          </article>
+          <article class="news-card">
+            <span class="news-tag" data-i18n="news_three_tag">Market</span>
+            <h3 data-i18n="news_three_title">Limited premium inventory on a unique coastline</h3>
+            <p data-i18n="news_three_text">
+              Scarcity at the top segment can create resilient demand from lifestyle buyers and investors.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="residences" class="residences">
+        <div class="residences-header">
+          <h2 data-i18n="residences_title">Residence collections</h2>
+          <p data-i18n="residences_sub">
+            Three curated experiences, each defined by proportion, privacy, and a distinct relationship to the
+            landscape.
+          </p>
+        </div>
+        <div class="residences-grid">
+          <article class="residence-card">
+            <h3 data-i18n="residence_one_title">Lagoon Line</h3>
+            <p data-i18n="residence_one_text">Open-plan layouts with expansive glazing and tranquil views.</p>
+            <span class="residence-meta" data-i18n="residence_one_meta">Limited floor plates</span>
+          </article>
+          <article class="residence-card">
+            <h3 data-i18n="residence_two_title">Garden Gallery</h3>
+            <p data-i18n="residence_two_text">Soft landscaping and private terraces for quiet mornings.</p>
+            <span class="residence-meta" data-i18n="residence_two_meta">Private outdoor zones</span>
+          </article>
+          <article class="residence-card">
+            <h3 data-i18n="residence_three_title">Horizon Collection</h3>
+            <p data-i18n="residence_three_text">Top-floor residences offering rare privacy and horizon views.</p>
+            <span class="residence-meta" data-i18n="residence_three_meta">Signature release</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="request" class="request">
+        <div class="request-header">
+          <h2 data-i18n="request_title">Request information</h2>
+          <p data-i18n="request_sub">
+            Share your details and our team will send the full brochure, current pricing, and the latest
+            availability.
+          </p>
+        </div>
+        <form class="request-form" id="requestForm">
+          <div class="form-row">
+            <label>
+              <span data-i18n="form_name">Full name</span>
+              <input type="text" name="name" placeholder="" required />
+            </label>
+            <label>
+              <span data-i18n="form_email">Email</span>
+              <input type="email" name="email" placeholder="" required />
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              <span data-i18n="form_phone">Phone</span>
+              <input type="tel" name="phone" placeholder="" />
+            </label>
+            <label>
+              <span data-i18n="form_whatsapp">WhatsApp</span>
+              <input type="tel" name="whatsapp" placeholder="" />
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              <span data-i18n="form_budget">Budget range</span>
+              <select name="budget">
+                <option data-i18n="budget_select">Select</option>
+                <option data-i18n="budget_one">Premium</option>
+                <option data-i18n="budget_two">Luxury</option>
+                <option data-i18n="budget_three">Ultra luxury</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            <span data-i18n="form_pref">Preferred language</span>
+            <select name="language">
+              <option value="en" data-i18n="form_lang_en">English</option>
+              <option value="fr" data-i18n="form_lang_fr">Français</option>
+              <option value="ar" data-i18n="form_lang_ar">العربية</option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="form_message">Your message</span>
+            <textarea name="message" rows="4" placeholder=""></textarea>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="consent" required />
+            <span data-i18n="form_consent">I agree to be contacted about Amira Dakhla.</span>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="contact_whatsapp" />
+            <span data-i18n="form_contact_whatsapp">I prefer to be contacted on WhatsApp.</span>
+          </label>
+          <div class="form-actions">
+            <button type="submit" class="btn primary" id="submitBtn" data-i18n="form_submit">Send request</button>
+            <a class="btn whatsapp" id="formWhatsappCta" href="#" target="_blank" rel="noopener" data-i18n="form_whatsapp_cta">Chat on WhatsApp</a>
+          </div>
+          <p class="form-note" id="formNote" data-i18n="form_note">We respond within 24 hours.</p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-left">
+        <span class="footer-brand" data-i18n="footer_brand">Amira Dakhla</span>
+        <span class="footer-text" data-i18n="footer_text">A premium coastal residence in Dakhla, Morocco.</span>
+      </div>
+      <div class="footer-links">
+        <a href="#availability" data-i18n="footer_availability">Availability</a>
+        <a href="#request" data-i18n="footer_request">Request Info</a>
+        <a href="Projet Amira.pdf" data-i18n="footer_brochure">Brochure</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
