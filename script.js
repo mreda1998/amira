@@ -14,7 +14,6 @@ const content = {
       "Amira Dakhla is a curated collection of residences designed for refined living on Morocco's southern shoreline. Limited release. Carefully serviced. Elegantly yours.",
     hero_cta_primary: "Request information",
     hero_cta_secondary: "Download brochure",
-    hero_cta_whatsapp: "WhatsApp",
     meta_status: "Sales status",
     meta_status_value: "Now accepting reservations",
     meta_delivery: "Delivery",
@@ -133,7 +132,6 @@ const content = {
       "Amira Dakhla est une collection de residences pensees pour un art de vivre raffine sur la cote sud du Maroc. Lancement limite. Service discret. Elegamment votre.",
     hero_cta_primary: "Demander des informations",
     hero_cta_secondary: "Telecharger la brochure",
-    hero_cta_whatsapp: "WhatsApp",
     meta_status: "Statut des ventes",
     meta_status_value: "Reservations ouvertes",
     meta_delivery: "Livraison",
@@ -252,7 +250,6 @@ const content = {
       "أميرة الداخلة مجموعة مختارة من الإقامات المصممة لحياة راقية على الساحل الجنوبي للمغرب. طرح محدود. خدمة راقية. بكل أناقة لك.",
     hero_cta_primary: "طلب معلومات",
     hero_cta_secondary: "تحميل الكتيب",
-    hero_cta_whatsapp: "واتساب",
     meta_status: "حالة المبيعات",
     meta_status_value: "نستقبل الحجوزات الآن",
     meta_delivery: "موعد التسليم",
@@ -417,13 +414,12 @@ const buildWhatsAppUrl = (number, message) => {
 };
 
 const updateWhatsAppCtas = () => {
-  const heroCta = document.getElementById("heroWhatsappCta");
   const formCta = document.getElementById("formWhatsappCta");
   const strings = getCurrentStrings();
   const message = strings.hero_title || content.en.hero_title;
   const href = buildWhatsAppUrl(config.whatsappNumber, message);
 
-  [heroCta, formCta].forEach((node) => {
+  [formCta].forEach((node) => {
     if (!node) return;
     node.href = href;
     node.style.pointerEvents = href === "#" ? "none" : "auto";
