@@ -164,7 +164,7 @@ const parseLead = (payload) => {
 
 const serveStatic = async (requestPath, response) => {
   const normalizedPath = requestPath === '/' ? '/index.html' : requestPath;
-  const safePath = normalizedPath.replace(/^\/+/, '');
+  const safePath = decodeURIComponent(normalizedPath.replace(/^\/+/, ''));
   const absolutePath = path.join(ROOT, safePath);
 
   if (!absolutePath.startsWith(ROOT)) {

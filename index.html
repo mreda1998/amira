@@ -36,6 +36,7 @@
         <a href="#availability" data-i18n="nav_availability">Availability</a>
         <a href="#invest" data-i18n="nav_invest">Invest in Dakhla</a>
         <a href="#residences" data-i18n="nav_residences">Residences</a>
+        <a href="#plan" data-i18n="nav_plan">Site Plan</a>
         <a href="#request" class="nav-cta" data-i18n="nav_request">Request Info</a>
       </nav>
       <div class="lang-switch">
@@ -277,6 +278,62 @@
         </div>
       </section>
 
+      <section id="plan" class="plan reveal">
+        <div class="plan-header">
+          <hr class="section-divider" />
+          <h2 data-i18n="plan_title">Interactive site plan</h2>
+          <p data-i18n="plan_sub">Explore each lot on the development plan. Click any unit to view its status, surface area, and details.</p>
+        </div>
+
+        <div class="plan-view-toggle">
+          <button class="plan-view-btn is-active" data-view="3d" data-i18n="plan_view_3d">3D View</button>
+          <button class="plan-view-btn" data-view="2d" data-i18n="plan_view_2d">Site Plan</button>
+        </div>
+
+        <div class="plan-3d-wrap" id="plan3dWrap">
+          <canvas id="planCanvas3d"></canvas>
+          <div class="plan-3d-hint">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6.5" stroke="currentColor"/><path d="M4 7h6M7 4v6" stroke="currentColor" stroke-linecap="round"/></svg>
+            <span data-i18n="plan_hint_3d">Drag to rotate · Scroll to zoom · Click a building</span>
+          </div>
+          <div class="plan-3d-badge">
+            <span class="plan-3d-dot available"></span><span data-i18n="plan_legend_available">Available</span>
+            <span class="plan-3d-dot reserved"></span><span data-i18n="plan_legend_reserved">Reserved</span>
+          </div>
+        </div>
+
+        <div class="plan-2d-wrap" id="plan2dWrap">
+          <div class="plan-controls">
+            <div class="plan-filters">
+              <button class="plan-filter-btn is-active" data-filter="all" data-i18n="plan_filter_all">All units</button>
+              <button class="plan-filter-btn" data-filter="available" data-i18n="plan_filter_available">Available</button>
+              <button class="plan-filter-btn" data-filter="reserved" data-i18n="plan_filter_reserved">Reserved</button>
+            </div>
+            <div class="plan-legend">
+              <span class="legend-item">
+                <span class="legend-dot available"></span>
+                <span data-i18n="plan_legend_available">Available</span>
+              </span>
+              <span class="legend-item">
+                <span class="legend-dot reserved"></span>
+                <span data-i18n="plan_legend_reserved">Reserved</span>
+              </span>
+            </div>
+          </div>
+          <div class="plan-svg-wrap">
+            <svg id="sitePlanSvg" viewBox="0 0 1100 900" xmlns="http://www.w3.org/2000/svg" aria-label="Amira Dakhla site plan"></svg>
+          </div>
+        </div>
+      </section>
+
+      <aside class="lot-panel" id="lotPanel" aria-hidden="true">
+        <button class="lot-panel-close" id="lotPanelClose" aria-label="Close">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 3l12 12M3 15L15 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+        <div class="lot-panel-body" id="lotPanelBody"></div>
+      </aside>
+      <div class="lot-panel-backdrop" id="lotPanelBackdrop"></div>
+
       <section id="request" class="request reveal">
         <div class="request-header">
           <hr class="section-divider" />
@@ -359,6 +416,7 @@
       </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
